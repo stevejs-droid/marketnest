@@ -4,28 +4,28 @@ const products = [
     category: "Beauty",
     price: 299,
     stock: 14,
-    image: "assets/product-listing.svg"
+    image: "product-listing.svg"
   },
   {
     name: "Organic Pickle Jar",
     category: "Food",
     price: 180,
     stock: 8,
-    image: "assets/order-management.svg"
+    image: "order-management.svg"
   },
   {
     name: "Cotton Tote Bag",
     category: "Fashion",
     price: 399,
     stock: 20,
-    image: "assets/hero-warehouse.svg"
+    image: "hero-warehouse.svg"
   },
   {
     name: "Wooden Craft Box",
     category: "Crafts",
     price: 550,
     stock: 5,
-    image: "assets/inventory-tracking.svg"
+    image: "inventory-tracking.svg"
   }
 ];
 
@@ -40,6 +40,8 @@ const inventoryList = document.getElementById("inventoryList");
 const productForm = document.getElementById("productForm");
 const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
+const loginForm = document.getElementById("loginForm");
+const loginMessage = document.getElementById("loginMessage");
 
 function renderProducts(list) {
   productGrid.innerHTML = "";
@@ -67,6 +69,7 @@ function renderProducts(list) {
 
 function renderInventory() {
   inventoryList.innerHTML = "";
+
   products.forEach((product) => {
     const item = document.createElement("li");
     item.innerHTML = `
@@ -78,9 +81,9 @@ function renderInventory() {
 }
 
 function updateCounts() {
-  document.getElementById("vendorsCount").textContent = 18;
-  document.getElementById("productsCount").textContent = products.length;
-  document.getElementById("ordersCount").textContent =
+  document.getElementById("vendorCount").textContent = 18;
+  document.getElementById("productCount").textContent = products.length;
+  document.getElementById("orderCount").textContent =
     orders.pending + orders.packed + orders.delivered;
 
   document.getElementById("pendingOrders").textContent = orders.pending;
@@ -92,16 +95,18 @@ function filterProducts() {
   const search = searchInput.value.toLowerCase();
   const category = categoryFilter.value;
 
-  const filtered = products.filter((product) => {
+  const filteredProducts = products.filter((product) => {
     const matchesSearch = product.name.toLowerCase().includes(search);
-    const matchesCategory = category === "all" || product.category === category;
+    const matchesCategory =
+      category === "all" || product.category === category;
+
     return matchesSearch && matchesCategory;
   });
 
-  renderProducts(filtered);
+  renderProducts(filteredProducts);
 }
 
-productForm.addEventListener("submit", (e) => {
+productForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const newProduct = {
@@ -109,7 +114,7 @@ productForm.addEventListener("submit", (e) => {
     category: document.getElementById("category").value,
     price: Number(document.getElementById("price").value),
     stock: Number(document.getElementById("stock").value),
-    image: "assets/product-listing.svg"
+    image: "product-listing.svg"
   };
 
   products.push(newProduct);
@@ -118,24 +123,41 @@ productForm.addEventListener("submit", (e) => {
   productForm.reset();
 });
 
-document.getElementById("simulateOrder").addEventListener("click", () => {
+document.getElementById("simulateOrder").addEventListener("click", function () {
   orders.pending += 1;
   updateCounts();
+});
+
+loginForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if (username === "admin" && password === "1234") {
+    loginMessage.textContent = "Login successful!";
+  } else {
+    loginMessage.textContent = "Invalid username or password.";
+  }
 });
 
 searchInput.addEventListener("input", filterProducts);
 categoryFilter.addEventListener("change", filterProducts);
 
 const reveals = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-    }
-  });
-}, { threshold: 0.15 });
 
-reveals.forEach((el) => observer.observe(el));
+const observer = new IntersectionObserver(
+  function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+reveals.forEach((element) => observer.observe(element));
 
 renderProducts(products);
 renderInventory();
