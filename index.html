@@ -8,13 +8,13 @@
 </head>
 <body>
   <header class="navbar">
-    <div class="brand">Market<span>Nest</span></div>
+    <div class="logo">Market<span>Nest</span></div>
     <nav>
       <a href="#home">Home</a>
       <a href="#features">Features</a>
       <a href="#products">Products</a>
       <a href="#dashboard">Dashboard</a>
-      <a href="#contact">Contact</a>
+      <a href="#login">Login</a>
     </nav>
   </header>
 
@@ -24,7 +24,7 @@
       <h1>Where Small Businesses <span>Grow Smarter</span></h1>
       <p>
         MarketNest is a smart mini warehouse platform that helps small businesses
-        display products, manage stock, and handle orders in one place.
+        store products, list them for sale, manage stock, and track orders in one place.
       </p>
       <div class="hero-buttons">
         <a href="#products" class="btn primary">View Products</a>
@@ -32,57 +32,57 @@
       </div>
     </div>
 
-    <div class="hero-visual float-card">
-      <img src="assets/hero-warehouse.svg" alt="Mini warehouse illustration" />
+    <div class="hero-image reveal float-card">
+      <img src="hero-warehouse.svg" alt="MarketNest warehouse" />
     </div>
   </section>
 
   <section class="stats">
-    <div class="stat-card reveal">
-      <h3 id="vendorsCount">0</h3>
+    <div class="stat-box reveal">
+      <h2 id="vendorCount">0</h2>
       <p>Registered Vendors</p>
     </div>
-    <div class="stat-card reveal">
-      <h3 id="productsCount">0</h3>
+    <div class="stat-box reveal">
+      <h2 id="productCount">0</h2>
       <p>Products Listed</p>
     </div>
-    <div class="stat-card reveal">
-      <h3 id="ordersCount">0</h3>
-      <p>Orders Managed</p>
+    <div class="stat-box reveal">
+      <h2 id="orderCount">0</h2>
+      <p>Total Orders</p>
     </div>
   </section>
 
-  <section class="features" id="features">
+  <section id="features" class="section">
     <div class="section-title reveal">
-      <h2>Core Web App Features</h2>
-      <p>Useful features for your project demo website.</p>
+      <h2>Core Features</h2>
+      <p>Useful features for a mini warehouse selling platform.</p>
     </div>
 
     <div class="feature-grid">
-      <article class="card reveal">
-        <img src="assets/product-listing.svg" alt="Product listing" />
+      <div class="card reveal">
+        <img src="product-listing.svg" alt="Product listing" />
         <h3>Product Listing</h3>
-        <p>Add and display products for sale with name, category, price, and stock status.</p>
-      </article>
+        <p>Display products for sale with category, stock, and price details.</p>
+      </div>
 
-      <article class="card reveal">
-        <img src="assets/inventory-tracking.svg" alt="Inventory tracking" />
+      <div class="card reveal">
+        <img src="inventory-tracking.svg" alt="Inventory tracking" />
         <h3>Inventory Tracking</h3>
-        <p>Track available quantity, low stock alerts, and product movement in the warehouse.</p>
-      </article>
+        <p>Monitor available stock and view product quantities easily.</p>
+      </div>
 
-      <article class="card reveal">
-        <img src="assets/order-management.svg" alt="Order management" />
+      <div class="card reveal">
+        <img src="order-management.svg" alt="Order management" />
         <h3>Order Management</h3>
-        <p>Monitor pending, packed, and delivered orders from a simple dashboard.</p>
-      </article>
+        <p>Track order counts and manage product movement through the dashboard.</p>
+      </div>
     </div>
   </section>
 
-  <section class="products" id="products">
+  <section id="products" class="section">
     <div class="section-title reveal">
       <h2>Products for Sale</h2>
-      <p>Sample products shown through dynamic listing cards.</p>
+      <p>Search and filter products in this sample marketplace.</p>
     </div>
 
     <div class="toolbar reveal">
@@ -99,41 +99,41 @@
     <div class="product-grid" id="productGrid"></div>
   </section>
 
-  <section class="dashboard" id="dashboard">
+  <section id="dashboard" class="section">
     <div class="section-title reveal">
-      <h2>Seller Dashboard Demo</h2>
-      <p>A simple demo of web app tools for your mini warehouse project.</p>
+      <h2>Seller Dashboard</h2>
+      <p>Add products, view inventory, and simulate orders.</p>
     </div>
 
     <div class="dashboard-grid">
       <div class="panel reveal">
         <h3>Add Product</h3>
         <form id="productForm">
-          <input type="text" id="name" placeholder="Product name" required />
+          <input type="text" id="name" placeholder="Product Name" required />
           <input type="text" id="category" placeholder="Category" required />
           <input type="number" id="price" placeholder="Price" required />
-          <input type="number" id="stock" placeholder="Stock quantity" required />
+          <input type="number" id="stock" placeholder="Stock Quantity" required />
           <button type="submit" class="btn primary full">Add Product</button>
         </form>
       </div>
 
       <div class="panel reveal">
         <h3>Inventory Overview</h3>
-        <ul class="inventory-list" id="inventoryList"></ul>
+        <ul id="inventoryList" class="inventory-list"></ul>
       </div>
 
       <div class="panel reveal">
         <h3>Order Management</h3>
         <div class="orders">
-          <div class="order-box pending">
+          <div class="order-card pending">
             <h4>Pending</h4>
             <p id="pendingOrders">0</p>
           </div>
-          <div class="order-box packed">
+          <div class="order-card packed">
             <h4>Packed</h4>
             <p id="packedOrders">0</p>
           </div>
-          <div class="order-box delivered">
+          <div class="order-card delivered">
             <h4>Delivered</h4>
             <p id="deliveredOrders">0</p>
           </div>
@@ -143,29 +143,25 @@
     </div>
   </section>
 
-  <section class="gallery">
+  <section id="login" class="section">
     <div class="section-title reveal">
-      <h2>Project Images</h2>
-      <p>You can use these illustrations in your GitHub project.</p>
+      <h2>Vendor Login</h2>
+      <p>Simple login demo for your project website.</p>
     </div>
-    <div class="gallery-grid">
-      <img class="reveal" src="assets/hero-warehouse.svg" alt="Warehouse" />
-      <img class="reveal" src="assets/product-listing.svg" alt="Product listing" />
-      <img class="reveal" src="assets/inventory-tracking.svg" alt="Inventory tracking" />
-      <img class="reveal" src="assets/order-management.svg" alt="Order management" />
-    </div>
-  </section>
 
-  <section class="contact" id="contact">
-    <div class="section-title reveal">
-      <h2>MarketNest</h2>
-      <p>Mini warehouse project website for GitHub Pages.</p>
+    <div class="login-box reveal">
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Enter username" required />
+        <input type="password" id="password" placeholder="Enter password" required />
+        <button type="submit" class="btn primary full">Login</button>
+      </form>
+      <p id="loginMessage"></p>
     </div>
   </section>
 
   <footer>
-    <p>MarketNest | Mini Warehouse Project</p>
-    <p>Made with HTML, CSS, and JavaScript</p>
+    <p><strong>MarketNest</strong> | Mini Warehouse Project</p>
+    <p>Built using HTML, CSS, and JavaScript</p>
   </footer>
 
   <script src="script.js"></script>
