@@ -136,6 +136,12 @@ loginForm.addEventListener("submit", function (e) {
 
   if (username === "admin" && password === "1234") {
     loginMessage.textContent = "Login successful!";
+
+    // Scroll to dashboard
+    document.getElementById("dashboard").scrollIntoView({
+      behavior: "smooth"
+    });
+
   } else {
     loginMessage.textContent = "Invalid username or password.";
   }
