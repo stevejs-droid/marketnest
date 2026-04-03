@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#fff7ed"/>
+  <text x="400" y="95" text-anchor="middle" font-size="34" font-family="Arial" fill="#0f172a" font-weight="bold">Order Management</text>
+  <rect x="100" y="160" width="180" height="240" rx="20" fill="#fde68a"/>
+  <rect x="310" y="160" width="180" height="240" rx="20" fill="#93c5fd"/>
+  <rect x="520" y="160" width="180" height="240" rx="20" fill="#86efac"/>
+  <text x="190" y="230" text-anchor="middle" font-size="28" font-family="Arial" fill="#92400e" font-weight="bold">Pending</text>
+  <text x="190" y="310" text-anchor="middle" font-size="58" font-family="Arial" fill="#92400e">08</text>
+  <text x="400" y="230" text-anchor="middle" font-size="28" font-family="Arial" fill="#1d4ed8" font-weight="bold">Packed</text>
+  <text x="400" y="310" text-anchor="middle" font-size="58" font-family="Arial" fill="#1d4ed8">15</text>
+  <text x="610" y="230" text-anchor="middle" font-size="28" font-family="Arial" fill="#166534" font-weight="bold">Delivered</text>
+  <text x="610" y="310" text-anchor="middle" font-size="58" font-family="Arial" fill="#166534">27</text>
+</svg>

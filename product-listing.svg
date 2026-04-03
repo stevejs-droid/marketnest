@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f0fdfa"/>
+  <rect x="90" y="80" width="620" height="440" rx="24" fill="#ffffff" stroke="#14b8a6" stroke-width="8"/>
+  <rect x="140" y="150" width="180" height="260" rx="18" fill="#ccfbf1"/>
+  <rect x="370" y="150" width="280" height="40" rx="10" fill="#99f6e4"/>
+  <rect x="370" y="215" width="220" height="28" rx="8" fill="#d1fae5"/>
+  <rect x="370" y="265" width="240" height="28" rx="8" fill="#d1fae5"/>
+  <rect x="370" y="315" width="150" height="50" rx="12" fill="#14b8a6"/>
+  <text x="400" y="105" text-anchor="middle" font-size="34" font-family="Arial" fill="#0f172a" font-weight="bold">Product Listing</text>
+  <text x="445" y="348" text-anchor="middle" font-size="22" font-family="Arial" fill="#ffffff">View Item</text>
+</svg>
