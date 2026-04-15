@@ -1,63 +1,31 @@
 # 🏬 MarketNest – Mini Warehouse Web App
 
-MarketNest is a **mini warehouse web application** designed to help small businesses store, display, and sell their products efficiently. It provides a simple platform for product listing, inventory tracking, and order management.
+MarketNest is a mini warehouse web application built using **HTML, CSS, and JavaScript**.  
+It helps manage product listing, inventory tracking, and basic order management through a clean and responsive interface.
 
 ---
 
-## 🚀 Live Website
+## 🚀 Features
 
-👉 https://stevejs-droid.github.io/marketnest/
-
----
-
-## 📌 Features
-
-### 🛍️ Product Listing
-
-* Add and display products for sale
-* Includes name, category, price, and stock
-
-### 📦 Inventory Tracking
-
-* View available stock for each product
-* Real-time updates when new products are added
-
-### 📊 Order Management
-
-* Track orders (Pending, Packed, Delivered)
-* Simulate new orders
-
-### 🔍 Search & Filter
-
-* Search products by name
-* Filter products by category
-
-### 🔐 Login System (Demo)
-
-* Simple login validation using JavaScript
-* Username: `admin`
-* Password: `1234`
-
-### 🎨 UI & Animations
-
-* Modern responsive design
-* Smooth scrolling and hover effects
-* Scroll reveal animations
+- 📦 Product listing system  
+- 📊 Inventory tracking  
+- 🧾 Order management (basic)  
+- 📱 Responsive design  
+- 🎨 Clean and modern UI  
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **HTML** – Structure of the website
-* **CSS** – Styling and layout
-* **JavaScript** – Dynamic features and interactivity
-* **GitHub Pages** – Hosting
+- HTML5  
+- CSS3  
+- JavaScript  
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
-```bash
+```text
 marketnest/
 ├── index.html
 ├── style.css
